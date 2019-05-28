@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<android.support.v7.widget.Toolbar
+		 android:id="@+id/appmainToolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="?attr/colorPrimary"
+        android:minHeight="52dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:elevation="4dp"
+		>
+
+		<Button
+			android:id="@+id/goOnlineButton"
+            android:background="@drawable/uberroundbutton_online"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:text="Go Online"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+		/>
+		</android.support.v7.widget.Toolbar>
+
+	<RelativeLayout
+		android:layout_height = "match_parent"
+		android:layout_width="match_parent">
+
+		<android.support.v4.view.ViewPager
+			android:id="@+id/viewpager"
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:layout_above="@+id/bnve"
+			android:layout_alignParentTop="true"
+			app:layout_behavior="@string/appbar_scrolling_view_behavior"
+		/>
+
+		<com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+			android:id="@+id/bnve"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:background="?android:attr/colorPrimary"
+			app:itemIconTint="@color/uberWhite"
+			app:itemTextColor="@color/uberWhite"
+			app:menu="@menu/bottomnav"
+		/>
+
+		</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,24 @@
+﻿<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <item android:id="@+id/action_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home_black_24dp"
+        />
+
+  <item android:id="@+id/action_earning"
+        android:title="Earnings"
+        android:icon ="@drawable/ic_payment_black_24dp"
+        />
+
+  <item android:id="@+id/action_rating"
+        android:title="Rating"
+        android:icon="@drawable/ic_star_black_24dp"
+        />
+  <item android:id="@+id/action_account"
+        android:title="Account"
+        android:icon="@drawable/ic_person_black_24dp"
+        />
+  
+  
+</menu>

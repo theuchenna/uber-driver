@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+	android:background="@color/uberWhite"
+    android:layout_height="fill_parent">
+
+	<fragment
+		android:id="@+id/map"
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		class="com.google.android.gms.maps.SupportMapFragment"
+	/>
+
+	<ImageView
+		android:id="@+id/centerMarker"
+		android:layout_height="60dp"
+		android:layout_width="60dp"
+		android:layout_gravity="center"
+		android:visibility="invisible"
+		android:src="@drawable/greenmarker"
+		android:tint="@color/uberPrimaryColor"
+	/>
+	
+    <LinearLayout
+        android:visibility="invisible"
+                    android:id="@+id/rideInfoLayout"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:background="@drawable/roundedges"
+            android:layout_gravity="bottom"
+            android:padding="13dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="25dp">
+        
+        <RelativeLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="0.5"
+            >
+            <TextView
+                   android:id="@+id/riderNameText"
+                android:text="Ufinix Academy"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+            
+             <ImageButton
+                    android:id="@+id/cancelTripButton"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="40dp"
+                    android:layout_width="40dp"
+                    android:padding="10dp"
+                    android:background="@drawable/roundedges" 
+                    android:tint="@color/uberAccentColor"
+                    android:src="@drawable/ic_clear_black_48dp"
+                    android:scaleType="centerCrop" />
+                
+                <ImageButton
+                    android:id="@+id/callRiderButton"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/cancelTripButton"
+                    android:layout_centerVertical="true"
+                    android:layout_height="40dp"
+                    android:layout_width="40dp"
+                    android:padding="10dp"
+                    android:background="@drawable/roundedges" 
+                    android:tint="@color/uberAccentColor"
+                    android:src="@drawable/ic_call_black_48dp"
+                    android:scaleType="centerCrop" />
+
+                <ImageButton
+                                                          
+                android:id="@+id/navigateButton"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/callRiderButton"
+                    android:layout_centerVertical="true"
+                    android:layout_height="40dp"
+                    android:layout_width="40dp"
+                    android:padding="10dp"
+                    android:background="@drawable/roundedges" 
+                    android:tint="@color/uberAccentColor"
+                    android:src="@drawable/ic_navigation"
+                    android:scaleType="centerCrop" />
+            
+            
+            
+        </RelativeLayout>
+        
+        
+        <RelativeLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="0.5"
+            >
+            
+             <Button
+            android:id="@+id/tripButton"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:text="Arrived PickUp"
+            android:textAllCaps="false"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="12dp"
+            android:translationZ="2dp"
+              android:elevation="2dp"
+            android:textColor="@color/uberWhite"
+            android:background="@drawable/uberroundbutton" 
+                android:layout_alignParentBottom="true"
+            />
+        </RelativeLayout>
+        
+    </LinearLayout>
+    
+</FrameLayout>
